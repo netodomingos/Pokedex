@@ -8,13 +8,13 @@ import styles from './styles';
 export default function Home() {
   return (
     <View style={styles.container}>
-      <View>
-        <Text>What Pokemon</Text>
-        <Text>are you looking for?</Text>
+      <View style={styles.content}>
+        <Text style={styles.title}>What Pokemon</Text>
+        <Text style={styles.title}>are you looking for?</Text>
 
-        <View>
+        <View style={styles.searchContainer}>
           <FontAwesome name='search' color="#000" size={20} />
-          <TextInput/>
+          <TextInput style={{width: '100%', marginLeft: 20}} placeholder='Search Pokemon, Move, Ability etc.' />
         </View>
 
 
