@@ -5,19 +5,21 @@ import Constants from 'expo-constants'
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFF',
-        flex: 1,
+        paddingBottom: 30,
+        borderBottomLeftRadius:25,
+        borderBottomRightRadius: 25,
     },
 
     background: {
         position: 'absolute',
         width: 350,
         height: 350,
-        right: -123,
-        top: -90
+        right: -110,
+        top: -110,
     },
 
     content: {
-        marginTop: Constants.statusBarHeight + 170,
+        marginTop: Constants.statusBarHeight + 150,
         marginHorizontal: 20
     },
 
@@ -46,43 +48,68 @@ const styles = StyleSheet.create({
         justifyContent: "space-evenly"
     },
     card: {
-        backgroundColor: "#4EC2A6",
         width: 180,
         height: 100,
         height: 70,
         padding: 20,
-        borderRadius: 30,
+        borderRadius: 20,
         flexDirection: 'row',
-        margin: 10
+        margin: 10,
+        overflow: 'hidden',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 7,
+        },
+        shadowOpacity: 0.41,
+        shadowRadius: 9.11,
+
+        elevation: 14,
     },
 
     backgroundCard1: {
         opacity: 0.2,
-        backgroundColor: '#F6F6F6',
-        position: 'absolute',
+        backgroundColor: '#FFF',
+        position: 'relative',
         width: 60,
         height: 60,
-        top: -25,
-        left: -25, 
-        borderRadius: 30
-    },
-
-    cardText: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 25,
-        justifyContent: 'center',
+        top: -45,
+        left: -45, 
+        borderRadius: 30,
+        zIndex: -1
     },
 
     backgroundCard2: {
         opacity: 0.2,
-        width: 60,
-        height: 60,
-        position: 'absolute',
-        right: 2,
-        marginTop: 5,
-        marginLeft: 10,
+        width: 70,
+        height: 70,
+        position: 'relative',
+        right: -40,
+        top: -20,
+        zIndex: 2
+    },
+
+    newsContainer: {
+        marginTop: 20,
+        marginHorizontal: 20,
+        flexDirection: "column"
+    },
+
+    titleContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: 'space-between'
+
+    },
+    newsTitle: {
+        fontSize: 23
+    },
+
+    newsLink: {
+        color: '#5073E8',
+        fontSize: 16
     }
+
 })
 
 export default styles
