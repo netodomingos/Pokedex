@@ -108,6 +108,34 @@ const styles = StyleSheet.create({
     newsLink: {
         color: '#5073E8',
         fontSize: 16
+    },
+
+    noticeContainer: {
+        flex: 1,
+        marginTop: 20,
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+
+    noticeText: {
+        marginTop: 20,
+    },
+
+    noticeTitle: {
+        fontSize: 16
+    },
+
+    noticeDate: {
+        color: 'gray',
+        fontSize: 13,
+        marginTop: 3,
+    },
+
+    noticeImage: {
+        height: 80,
+        width: 120,
+        marginLeft: 40,
+        borderRadius: 20,
     }
 
 })

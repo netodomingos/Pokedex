@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Image, TouchableOpacity, ScrollView } from 'react-native';
 
 import { FontAwesome } from '@expo/vector-icons'
 
@@ -9,11 +9,11 @@ import { AppLoading } from 'expo'
 import { useFonts } from '@use-expo/font'
 
 import Pokeball from './Assets/pokeball.png'
+import pokemonGo from './Assets/pokemonGo.jpg'
+import tcgo from './Assets/tcgo.jpg'
+import swordShield from './Assets/swordShield.jpg'
 
 import styles from './styles';
-
-
-
 
 export default function Home() {
 
@@ -30,6 +30,9 @@ export default function Home() {
   } else {
       return(
         <>
+          <ScrollView
+            vertical={true}
+          >
           <View style={styles.container}>
             <Image source={Pokeball} style={styles.background}/>
               <View style={styles.content}>
@@ -90,7 +93,33 @@ export default function Home() {
             <Text style={[styles.newsTitle,{ fontFamily: 'TTCommons-Bold' }]}>Pokémon News</Text>
             <Text style={[styles.newsLink, { fontFamily: 'TTCommons'}]}>View All</Text>
           </View>
+
+        
+            <View style={styles.noticeContainer}>
+              <View style={styles.noticeText}>
+                <Text style={[styles.noticeTitle, { fontFamily: 'TTCommons-Bold' }]}>Pokemon GO's Latest Updates</Text>
+                <Text style={[styles.noticeDate, { fontFamily: 'TTCommons' }]}>04, Apr 2020</Text>
+              </View>
+              <Image source={pokemonGo} style={styles.noticeImage} />
+            </View>
+
+            <View style={styles.noticeContainer}>
+              <View style={styles.noticeText}>
+                <Text style={[styles.noticeTitle, { fontFamily: 'TTCommons-Bold' }]}>Play The Pokemon TCG Online</Text>
+                <Text style={[styles.noticeDate, { fontFamily: 'TTCommons' }]}>04, Apr 2020</Text>
+              </View>
+              <Image source={tcgo} style={styles.noticeImage} />
+            </View>
+
+            <View style={styles.noticeContainer}>
+              <View style={styles.noticeText}>
+                <Text style={[styles.noticeTitle, { fontFamily: 'TTCommons-Bold' }]}>Tips For You Galar Region Travel</Text>
+                <Text style={[styles.noticeDate, { fontFamily: 'TTCommons' }]}>04, Apr 2020</Text>
+              </View>
+              <Image source={swordShield} style={styles.noticeImage} />
+            </View>
         </View>
+          </ScrollView>
       </>
     )
   }
