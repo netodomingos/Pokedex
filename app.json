@@ -1,11 +1,9 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "Pokedex App",
     "slug": "pokedex",
     "platforms": [
-      "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,6 +21,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.nexusdev.pokedex",
+      "versionCode": 1
     }
   }
 }

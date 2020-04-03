@@ -2,13 +2,16 @@ import React from 'react';
 
 import { View, Text, TextInput, Image, TouchableOpacity, ScrollView } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native'
+
 import { FontAwesome } from '@expo/vector-icons'
 
 import { AppLoading } from 'expo'
 
 import { useFonts } from '@use-expo/font'
 
-import Pokeball from './Assets/pokeball.png'
+import Pokeball from '../../global/Assets/pokeball.png'
+
 import pokemonGo from './Assets/pokemonGo.jpg'
 import tcgo from './Assets/tcgo.jpg'
 import swordShield from './Assets/swordShield.jpg'
@@ -16,6 +19,8 @@ import swordShield from './Assets/swordShield.jpg'
 import styles from './styles';
 
 export default function Home() {
+
+  const navigation = useNavigation()
 
   let [fontsLoaded] = useFonts({
     'TTCommons': require('../../../assets/font/TTCommons-Regular.ttf'),
@@ -45,7 +50,7 @@ export default function Home() {
                 </View>
             
               <View style={styles.menu}>
-                <TouchableOpacity style={[styles.card, { backgroundColor: "#4EC2A6", }]}>
+                <TouchableOpacity style={[styles.card, { backgroundColor: "#4EC2A6", }]} onPress={() => navigation.navigate('Pokedex')}>
                   <View  style={styles.backgroundCard1}/>
                     <Text style={{ fontFamily: 'TTCommons-Medium', fontSize: 28, color: "#FFF", position: 'absolute', left: 20, bottom: '65%' }}>Pokedex</Text>
                   <Image source={Pokeball} style={styles.backgroundCard2}/>
